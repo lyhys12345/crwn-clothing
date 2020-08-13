@@ -23,13 +23,13 @@ class SignIn extends React.Component{
         event.preventDefault();
 
         this.setState({email:'', password:''})
-    }
+    };
 
     handleChange = (event) => {
-        // console.log(event.target);
+        
         const {name,value} = event.target;
-        this.setState({[name]:value})
-    }
+        this.setState({[name]:value});
+    };
 
     render(){
         return(
@@ -40,13 +40,15 @@ class SignIn extends React.Component{
                 </div>
 
 
-                <form onSubmit={this.handleSubmit}>
+                <form className='sign-in-form' onSubmit={this.handleSubmit}>
+
+     
                     <FormInput 
                         name="email" 
                         type="email" 
                         handleChange={this.handleChange} 
                         value={this.state.email} 
-                        label='email'
+                        label='Email'
                         required/>
           
                     <FormInput 
@@ -54,7 +56,7 @@ class SignIn extends React.Component{
                         type="password" 
                         value={this.state.password} 
                         handleChange={this.handleChange}
-                        label='password'
+                        label='Password'
                         required/>
       
 
