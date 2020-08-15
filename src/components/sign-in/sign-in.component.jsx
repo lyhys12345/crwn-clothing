@@ -1,6 +1,6 @@
 import React from 'react';
 
-import FormInput from '../form-imput/form-input.component';
+import FormInput from '../form-input/form-input.component';
 
 import CustomButton from '../custom-button/custom-button.component';
 
@@ -45,10 +45,9 @@ class SignIn extends React.Component{
     render(){
         return(
             <div className='sign-in'>
-                <div className="title">
-                    <h2>I already have an account</h2>
-                    <span>Sign in with your email and password </span>
-                </div>
+                <h2 className="title">I already have an account</h2>
+                <span>Sign in with your email and password </span>
+
 
 
                 <form className='sign-in-form' onSubmit={this.handleSubmit}>
@@ -76,7 +75,7 @@ class SignIn extends React.Component{
                         <CustomButton type="submit" value="Submit Form">
                             Sign in
                         </CustomButton>
-                        <CustomButton  onClick={signInWithGoogle} isGoogleSignIn>
+                        <CustomButton type="button" onClick={signInWithGoogle} isGoogleSignIn>
                         Sign in with Google
                         </CustomButton>
                     </div>
