@@ -9,7 +9,7 @@ import './header.styles.scss';
 import  { ReactComponent as Logo } from '../../assets/073 crown.svg';
 
 import { connect } from 'react-redux';
-import store from '../../redux/store';
+// import store from '../../redux/store';
 
 const Header= ( {currentUser, hidden } )=>(
     
