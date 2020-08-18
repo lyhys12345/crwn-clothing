@@ -18,6 +18,8 @@ import { setCurrentUser } from './redux/user/user.actions';
 import { selectCurrentUser } from './redux/user/user.selectors';
 
 
+
+
 class App extends React.Component {
 
 
@@ -41,9 +43,7 @@ class App extends React.Component {
         setCurrentUser(userAuth);
       }
     });
-    
-    
-  }
+  };
 
   componentWillUnmount(){
     this.unsubscribeFromAuth();
@@ -56,7 +56,7 @@ class App extends React.Component {
         <Header />
         <Switch>
           <Route exact path='/' component={HomePage} />
-          <Route exact path='/shop' component={ShopPage} />
+          <Route  path='/shop' component={ShopPage} />
           <Route exact path='/checkout' component={CheckoutPage} />
           <Route exact path='/signin' 
           render={()=>
